@@ -1,17 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Application informations
 
-Things you may want to cover:
+Application name: invoice
+Authors: Team14 (AnnaGiovanelli & GionniReffo)
+Provided to: UniTn "ase2017"
 
 * Ruby version
 
+Authors has used "Rails" over "Ruby 2.3.4" and "2.4.2"
+
 * System dependencies
+
+Run:
+  bundle install
 
 * Configuration
 
 * Database creation
+
+Run:
+  rails db:migration
 
 * Database initialization
 
@@ -21,4 +30,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+To start Rails server use:
+  rails server
+If port 3000 is denied by firewall, you can force IPaddress and/or port using:
+  rails server -b 0.0.0.0 -p 8080
