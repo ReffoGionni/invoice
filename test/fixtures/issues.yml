@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  desctiption: MyText
+  is_service_required: false
+
+two:
+  desctiption: MyText
+  is_service_required: false

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idclient:</strong>
+  <%= @invoice.idClient %>
+</p>
+
+<p>
+  <strong>Invoicenumber:</strong>
+  <%= @invoice.invoiceNumber %>
+</p>
+
+<p>
+  <strong>Totduration:</strong>
+  <%= @invoice.totDuration %>
+</p>
+
+<p>
+  <strong>Paydate:</strong>
+  <%= @invoice.payDate %>
+</p>
+
+<p>
+  <strong>Totaldue:</strong>
+  <%= @invoice.totalDue %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>

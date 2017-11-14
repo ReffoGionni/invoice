@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idClient: 9.99
+  invoiceNumber: 9.99
+  totDuration: 9.99
+  payDate: MyString
+  totalDue: 9.99
+
+two:
+  idClient: 9.99
+  invoiceNumber: 9.99
+  totDuration: 9.99
+  payDate: MyString
+  totalDue: 9.99

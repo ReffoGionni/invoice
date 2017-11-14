@@ -1,0 +1,42 @@
+<%= form_with(model: invoice, local: true) do |form| %>
+  <% if invoice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+      <ul>
+      <% invoice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idClient %>
+    <%= form.text_field :idClient, id: :invoice_idClient %>
+  </div>
+
+  <div class="field">
+    <%= form.label :invoiceNumber %>
+    <%= form.text_field :invoiceNumber, id: :invoice_invoiceNumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totDuration %>
+    <%= form.text_field :totDuration, id: :invoice_totDuration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payDate %>
+    <%= form.text_field :payDate, id: :invoice_payDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalDue %>
+    <%= form.text_field :totalDue, id: :invoice_totalDue %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Desctiption:</strong>
+  <%= @issue.desctiption %>
+</p>
+
+<p>
+  <strong>Is service required:</strong>
+  <%= @issue.is_service_required %>
+</p>
+
+<%= link_to 'Edit', edit_issue_path(@issue) %> |
+<%= link_to 'Back', issues_path %>
