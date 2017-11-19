@@ -1,7 +1,12 @@
-require 'test_helper'
+require_relative '../test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  describe "user" do
+    it "has a valid name" do
+      @user = User.new(:name => "Anna", :role => "TEC")
+      expect(@user.hasValidName?).to be true
+    end
+  end
+
 end
