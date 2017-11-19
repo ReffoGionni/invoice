@@ -11,4 +11,8 @@ class User < ApplicationRecord
     name.length >= 2
   end
   
+  def hasValidRole?
+    ["TEC","COM","IT","DIR","CTB"].include? role 
+  end
+  
 end
