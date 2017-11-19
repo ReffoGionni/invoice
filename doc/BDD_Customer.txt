@@ -1,0 +1,6 @@
+Feature: Managing customer
+
+Scenario: Inserting a new customer
+Given I am into new customer page
+When I create customer
+Then user cf, name, address, postcode, city, prov mustn't be empty 
