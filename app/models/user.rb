@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :customer, through: :issue
   
   def hasValidName?
-    :name.length >= 2
+    name.length >= 2
   end
   
 end
