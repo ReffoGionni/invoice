@@ -15,7 +15,7 @@ class User < ApplicationRecord
   def isFirstCharOfNameALetter?
     # con le regular expression mi ricavo dal primo carattere del nome la presenza nel set di sole lettere maiuscome e minuscole
     # se nil allora OK, altrimenti KO
-    !(name[0][/[a-zA-Z]+/].nil?)
+    !(name.empty?) && !(name[0][/[a-zA-Z]+/].nil?)
   end
 
   def hasValidName?
@@ -31,8 +31,9 @@ class User < ApplicationRecord
       context ||= (new_record? ? :create : :update)
       output = super(context)
 
-      errors.add(:name, "not valid name") unless hasValidName?
-      errors.add(:role, "not valid role") unless hasValidRole?
+      errors.add(:name, "must has two or more chars") unless hasValidNameLength?
+      errors.add(:name, "must has a letter for first char") unless isFirstCharOfNameALetter?
+      errors.add(:role, "not valid") unless hasValidRole?
       
       errors.empty? && output
   end
