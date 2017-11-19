@@ -7,12 +7,34 @@ class User < ApplicationRecord
   has_many :issue
   has_many :customer, through: :issue
   
-  def hasValidName?
+  # an User has a valid name if has two or more chars and the first is a letter
+  def hasValidNameLength?
     name.length >= 2
   end
+
+  def isFirstCharOfNameALetter?
+    # con le regular expression mi ricavo dal primo carattere del nome la presenza nel set di sole lettere maiuscome e minuscole
+    # se nil allora OK, altrimenti KO
+    !(name[0][/[a-zA-Z]+/].nil?)
+  end
+
+  def hasValidName?
+    hasValidNameLength? && isFirstCharOfNameALetter?
+  end
   
+  # an User has a valid role if is one of TEC,COM,IT,DIR,CTB
   def hasValidRole?
     ["TEC","COM","IT","DIR","CTB"].include? role 
+  end
+  
+  def valid? (context=nil)
+      context ||= (new_record? ? :create : :update)
+      output = super(context)
+
+      errors.add(:name, "not valid name") unless hasValidName?
+      errors.add(:role, "not valid role") unless hasValidRole?
+      
+      errors.empty? && output
   end
   
 end

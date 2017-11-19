@@ -14,6 +14,11 @@ class UserTest < ActiveSupport::TestCase
       expect(@user.hasValidName?).to be false
     end
 
+    it "has only letters in the first char of name" do
+      @user = User.new(:name => "68JR", :role => "TEC")
+      expect(@user.hasValidName?).to be false
+    end
+
     it "has a valid role" do
       @user = User.new(:name => "Anna", :role => "TEC")
       expect(@user.hasValidRole?).to be true
