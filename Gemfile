@@ -62,3 +62,9 @@ group :test, :development do
   gem 'factory_bot_rails'
   gem 'ffaker'
 end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'cucumber-rails', require: false
+  gem 'selenium-webdriver'
+end

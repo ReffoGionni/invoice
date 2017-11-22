@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20171114214619) do
     t.decimal "idClient"
     t.decimal "invoiceNumber"
     t.decimal "totDuration"
-    t.string "payDate"
+    t.date "payDate"
     t.decimal "totalDue"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
