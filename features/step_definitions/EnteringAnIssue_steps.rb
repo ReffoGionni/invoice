@@ -10,14 +10,14 @@ When("I click {string}") do |string|
   click_on string
 end
 
-Then("I expect the confirmation message") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
 When("I left blank the description") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
+Then("I expect the confirmation message") do
+  expect(page).to have_text "successfully"
+end
+
 Then("I expect to get an error message") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_text "error"
 end

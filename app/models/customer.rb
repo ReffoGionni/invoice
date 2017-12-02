@@ -23,6 +23,7 @@ class Customer < ApplicationRecord
       output = super(context)
 
       errors.add(:cf, "must be valid") unless hasValidCf?
+      errors.add(:surname, "must have two or more chars") unless surname.length >= 2
       errors.add(:name, "must have two or more chars") unless name.length >= 2
       errors.add(:address, "must have two or more chars") unless address.length >= 2
       errors.add(:postcode, "must exist") if postcode.nil?
