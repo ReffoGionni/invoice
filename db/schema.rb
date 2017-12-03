@@ -37,15 +37,15 @@ ActiveRecord::Schema.define(version: 20171114214619) do
   end
 
   create_table "issues", force: :cascade do |t|
+    t.string "cf"
     t.text "desctiption"
-    t.boolean "is_service_required"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "services", force: :cascade do |t|
     t.decimal "duration"
-    t.decimal "idUser"
+    t.string "cf"
     t.decimal "rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

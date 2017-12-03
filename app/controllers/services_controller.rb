@@ -4,6 +4,7 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
+    filter = ""
     @services = Service.all
   end
 
@@ -69,6 +70,7 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:duration, :idUser, :rate)
+      params.require(:service).permit(:duration, :cf, :rate)
     end
+    
 end

@@ -4,8 +4,9 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
-  end
+    @filter = ""
+    @customers = Customer.where("Surname like '" + @filter + "%'")
+  end    
 
   # GET /customers/1
   # GET /customers/1.json
@@ -61,6 +62,13 @@ class CustomersController < ApplicationController
     end
   end
 
+  public
+    def setFilter(str)
+      @filter = str
+      @customers = Customer.where("Surname like '" + @filter.to_s + "%'")
+      render :layout => false
+    end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
@@ -71,4 +79,5 @@ class CustomersController < ApplicationController
     def customer_params
       params.require(:customer).permit(:cf, :name, :surname, :phone, :email, :address, :postcode, :city, :prov)
     end
+    
 end

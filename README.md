@@ -26,9 +26,15 @@ Run:
 Run:
   rails db:migration
 
-* Database initialization
+* To recreate the database
+
+Run:
+  rake db:drop db:create db:migrate
 
 * How to run the test suite
+
+Run:
+  rake cucumber
 
 * Services (job queues, cache servers, search engines, etc.)
 
@@ -36,5 +42,6 @@ Run:
 
 To start Rails server use:
   rails server
+  
 If port 3000 is blocked by firewall, you can force IPaddress and/or port using:
   rails server -b 0.0.0.0 -p 8080
