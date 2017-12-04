@@ -17,7 +17,7 @@ class IssuesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create issue" do
     assert_difference('Issue.count') do
-      post issues_url, params: { issue: { desctiption: @issue.desctiption, is_service_required: @issue.is_service_required } }
+      post issues_url, params: { issue: { cf: @issue.cf, description: @issue.desctiption } }
     end
 
     assert_redirected_to issue_url(Issue.last)
@@ -34,7 +34,7 @@ class IssuesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update issue" do
-    patch issue_url(@issue), params: { issue: { desctiption: @issue.desctiption, is_service_required: @issue.is_service_required } }
+    patch issue_url(@issue), params: { issue: { cf: @issue.cf, description: @issue.desctiption } }
     assert_redirected_to issue_url(@issue)
   end
 

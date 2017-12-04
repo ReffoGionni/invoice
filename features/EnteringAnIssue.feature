@@ -3,12 +3,12 @@ Feature: A customer insert a new issue
 
   Scenario: Entering a valid issue
     Given I am viewing the new issue page
-    When I fill the description
-    And I click "Submit"
+    When I correctly fill the Cf and Description
+    And I click "Create Issue"
     Then I expect the confirmation message
 
   Scenario: Entering an invalid issue
     Given I am viewing the new issue page
-    When I left blank the description
-    And I click "Submit"
+    When I left blank the  Cf and Description
+    And I click "Create Issue"
     Then I expect to get an error message

@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20171114214619) do
   end
 
   create_table "invoices", force: :cascade do |t|
-    t.decimal "idClient"
+    t.decimal "cf"
     t.decimal "invoiceNumber"
     t.decimal "totDuration"
     t.date "payDate"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20171114214619) do
   end
 
   create_table "issues", force: :cascade do |t|
-    t.text "desctiption"
-    t.boolean "is_service_required"
+    t.string "cf"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,7 +3,7 @@ Feature: invoice for a customer
 
   Scenario: Entering valid information of a invoice
     Given I am viewing the initial invoice page
-    When I correctly fill the CF field    
+    When I correctly fill the fields    
     And I click "retrive data"
     Then I see the invoice
 

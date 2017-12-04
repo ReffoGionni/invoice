@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Idclient</th>
+      <th>Cf</th>
       <th>Invoicenumber</th>
       <th>Totduration</th>
       <th>Paydate</th>
@@ -17,7 +17,7 @@
   <tbody>
     <% @invoices.each do |invoice| %>
       <tr>
-        <td><%= invoice.idClient %></td>
+        <td><%= invoice.cf %></td>
         <td><%= invoice.invoiceNumber %></td>
         <td><%= invoice.totDuration %></td>
         <td><%= invoice.payDate %></td>

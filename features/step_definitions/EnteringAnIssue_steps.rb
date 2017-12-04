@@ -1,9 +1,11 @@
 Given("I am viewing the new issue page") do
-  FactoryBot.create(:issue)
+  visit new_issue_path
 end
 
-When("I fill the description") do
-  fill_in 'Description', with: 'I have a problem'
+When("I correctly fill the Cf and Description") do
+  fill_in 'issue_cf', with: "GVNNNA97T67D530S"
+  fill_in 'Description', with: "I have a problem"
+
 end
 
 When("I click {string}") do |string|
@@ -11,13 +13,15 @@ When("I click {string}") do |string|
 end
 
 Then("I expect the confirmation message") do
-  pending # Write code here that turns the phrase above into concrete actions
+   expect(page).to have_content("success")
 end
 
-When("I left blank the description") do
-  pending # Write code here that turns the phrase above into concrete actions
+When("I left blank the  Cf and Description") do
+    fill_in 'Cf', with: "GVNNNA97T67D530S"
+    fill_in 'Description', with: ""
+
 end
 
 Then("I expect to get an error message") do
-  pending # Write code here that turns the phrase above into concrete actions
+   expect(page).to have_content("error")
 end
