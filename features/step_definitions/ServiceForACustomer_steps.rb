@@ -1,9 +1,12 @@
 Given("I am viewing the service page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit services_path
+  click_on 'New Service'
+  expect(page).to have_text "New Service"
 end
 
 When("I correctly fill the CF and rate fields") do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in "Cf", with: "RFFGNN00E01A111X"
+  fill_in "Rate", with: "12"
 end
 
 Then("I expect the stopwatch will start") do
