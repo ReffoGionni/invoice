@@ -61,6 +61,7 @@ end
 group :test, :development do
   gem 'factory_bot_rails'
   gem 'ffaker'
+  gem 'railroady'
 end
 
 group :test do

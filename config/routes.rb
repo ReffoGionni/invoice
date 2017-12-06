@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "issues#new"
   resources :services
   resources :users
   resources :customers
