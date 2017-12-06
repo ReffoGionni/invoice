@@ -6,17 +6,17 @@
 esploring how authors has been develope it using BDD technics.
 
 ## Documentation
-[Use Case, ER diagram and User Story document](doc/"UserStory.pdf")
+[Use Case, ER diagram and User Story document](doc/UserStory.pdf)
 
-[Test coverage document](doc/"TestCoverage.pdf")
+[Test coverage document](doc/TestCoverage.pdf)
 
-[Models diagram](doc/"models_brief.svg")
+[Models diagram](doc/models_brief.svg)
 
-[Models complete diagram](doc/"models_complete.svg")
+[Models complete diagram](doc/models_complete.svg)
 
-[Controllers diagram](doc/"controllers_brief.svg")
+[Controllers diagram](doc/controllers_brief.svg)
 
-[Controllers complete diagram](doc/"controllers_complete.svg")
+[Controllers complete diagram](doc/controllers_complete.svg)
 
 Diagrams are generated with [RaildRoady](https://github.com/preston/railroady)
 
