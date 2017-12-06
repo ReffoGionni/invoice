@@ -12,13 +12,7 @@ When("I correctly fill the fields") do
 end
 
 Then("I see the invoice") do
-  #pending
-  invoice=invoice.last
-  expect(page).to have_content(invoice.cf)
-  expect(page).to have_content(invoice.invoicenumber)
-  expect(page).to have_content(invoice.totduration)
-  expect(page).to have_content(invoice.paydate("%d-%m-%y"))
-  expect(page).to have_content(invoice.totaldue)
+  visit  @invoice
 end
 
 Given("I am viewing the filled invoice page") do

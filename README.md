@@ -8,7 +8,8 @@ Provided to: UniTn "ase2017"
 
 * Documentation can be found in
 
-doc/"User Story - TEAM 14_v03_20171125.pdf"
+doc/"User Story - TEAM 14_v04_20171204.pdf"
+doc/"TestCoverage.pdf"
 
 * Ruby version
 
