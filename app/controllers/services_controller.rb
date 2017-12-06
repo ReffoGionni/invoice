@@ -4,7 +4,6 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    filter = ""
     @services = Service.all
   end
 
@@ -16,6 +15,9 @@ class ServicesController < ApplicationController
   # GET /services/new
   def new
     @service = Service.new
+    if params[:cf]
+      @service.cf = params[:cf]
+    end
   end
 
   # GET /services/1/edit

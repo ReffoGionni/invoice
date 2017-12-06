@@ -6,13 +6,8 @@
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @customer.name %>
-</p>
-
-<p>
-  <strong>Surname:</strong>
-  <%= @customer.surname %>
+  <strong>Surname & Name</strong>
+  <%= @customer.surname %> <%= @customer.name %>
 </p>
 
 <p>
@@ -31,19 +26,11 @@
 </p>
 
 <p>
-  <strong>Postcode:</strong>
-  <%= @customer.postcode %>
-</p>
-
-<p>
   <strong>City:</strong>
-  <%= @customer.city %>
-</p>
-
-<p>
-  <strong>Prov:</strong>
-  <%= @customer.prov %>
+  <%= @customer.postcode %> <%= @customer.city %> (<%= @customer.prov %>)
 </p>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'New service', new_service_path(@service => { :cf => @customer.cf }) %> |
+<%= link_to 'New invoice', new_invoice_path(@invoice => { :cf => @customer.cf }) %> |
 <%= link_to 'Back', customers_path %>

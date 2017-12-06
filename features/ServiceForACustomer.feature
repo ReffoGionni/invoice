@@ -2,8 +2,10 @@ Feature: Service for a customer
   As a user I want to do a customer service
 
   Scenario: Start the timer
-    Given I am viewing the service page
-    When I correctly fill the CF and rate fields
+    Given I am viewing the customers page index
+    And I click "Show" on first entry
+    And I click "New Service"
+    When I fill the rate field
     And I click "Start timer"
     Then I expect the stopwatch will start
 

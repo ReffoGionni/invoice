@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :duration %>
-    <%= form.text_field :duration, id: :service_duration %>
-  </div>
-
-  <div class="field">
     <%= form.label :cf %>
     <%= form.text_field :cf, id: :service_cf %>
   </div>
@@ -24,6 +19,11 @@
   <div class="field">
     <%= form.label :rate %>
     <%= form.text_field :rate, id: :service_rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration, id: :service_duration %>
   </div>
 
   <div class="actions">

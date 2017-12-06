@@ -15,6 +15,9 @@ class InvoicesController < ApplicationController
   # GET /invoices/new
   def new
     @invoice = Invoice.new
+    if params[:cf]
+      @invoice.cf = params[:cf]
+    end
   end
 
   # GET /invoices/1/edit
