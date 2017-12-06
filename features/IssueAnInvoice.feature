@@ -8,7 +8,9 @@ Feature: invoice for a customer
     And I click "Create Invoice"
     Then I see the invoice
 
-  Scenario: Issue the invoice
-    Given I am viewing the filled invoice page
-    When I click "Issue Invoice"
+  Scenario: Pay the invoice
+    Given I am viewing the invoices page
+    When I choose the invoice to be paid
+    And I see the invoice
+    And I click "Pay"
     Then I expect to see the confirmation message

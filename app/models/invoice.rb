@@ -4,7 +4,7 @@ class Invoice < ApplicationRecord
   has_many :service, dependent: :destroy
 end
 def hasMinData?
-  !(cf.nil?) && !(invoiceNumber.nil?) && !(totDuration.nil?) && !(payDate.nil?) && !(totalDue.nil?)
+  !(cf.nil?) && !(invoiceNumber.nil?) && !(totDuration.nil?) && !(totalDue.nil?)
 end
 
 # Semplice verifica di validità del codice fiscale

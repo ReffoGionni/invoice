@@ -15,8 +15,15 @@ Then("I see the invoice") do
   visit  @invoice
 end
 
-Given("I am viewing the filled invoice page") do
+Given("I am viewing the invoices page") do
   visit invoices_path
+end
+
+When("I choose the invoice to be paid") do
+  #find("input[type='checkbox']").set(true)
+  #page.check
+  #find(:checkbox, locator, options).set(true)
+  pending
 end
 
 Then("I expect to see the confirmation message") do
