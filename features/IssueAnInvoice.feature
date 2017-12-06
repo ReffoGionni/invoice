@@ -10,5 +10,5 @@ Feature: invoice for a customer
 
   Scenario: Issue the invoice
     Given I am viewing the filled invoice page
-    When I click "Issue Invoice"
+    When I click "Create Invoice"
     Then I expect to see the confirmation message

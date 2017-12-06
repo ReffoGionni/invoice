@@ -16,7 +16,10 @@ Then("I see the invoice") do
 end
 
 Given("I am viewing the filled invoice page") do
-  visit invoices_path
+  visit new_invoice_path
+  expect(page).to have_content("New Invoice")
+  fill_in 'Cf', with: 'RFFGNN68E19C743T'
+  fill_in 'Invoicenumber', with: '123'
 end
 
 Then("I expect to see the confirmation message") do
