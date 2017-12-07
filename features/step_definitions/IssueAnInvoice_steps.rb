@@ -12,7 +12,7 @@ When("I correctly fill the fields") do
 end
 
 Then("I see the invoice") do
-  visit  @invoice
+  visit invoices_path(@invoice)
 end
 
 Given("I am viewing the invoices page") do
@@ -20,12 +20,12 @@ Given("I am viewing the invoices page") do
 end
 
 When("I choose the invoice to be paid") do
-  #find("input[type='checkbox']").set(true)
-  #page.check
-  #find(:checkbox, locator, options).set(true)
-  pending
-end
+  find("input[type='checkbox']").set(true)
+  end
 
 Then("I expect to see the confirmation message") do
   expect(page).to have_content("success")
+end
+When("I have invoice") do
+  @invoice=FactoryBot.create(:invoice)
 end
