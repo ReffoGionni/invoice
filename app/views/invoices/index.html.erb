@@ -19,7 +19,7 @@
     <% @invoices.each do |invoice| %>
 
       <tr>
-        <td><label for="pay"><input type="checkbox" name="pay"></label></td>
+        <td><%=check_box_tag "invoice_ids[]", invoice.id%></td>
         <td><%= invoice.cf %></td>
         <td><%= invoice.invoiceNumber %></td>
         <td><%= invoice.totDuration %></td>

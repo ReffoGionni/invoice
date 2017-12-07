@@ -20,7 +20,7 @@ Given("I am viewing the invoices page") do
 end
 
 When("I choose the invoice to be paid") do
-  find("input[type='checkbox']").set(true)
+  find("input[type='checkbox'][value='#{Invoice.first.id}']").set(true)
   end
 
 Then("I expect to see the confirmation message") do
