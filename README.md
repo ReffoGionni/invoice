@@ -3,7 +3,7 @@
 * customers that needs assistence online with semplicity
 * users than wants easly issue services and invoices for their customers
 > Warning: this is a not functioning didactical project and may be used to 
-esploring how authors has been develope it using BDD technics.
+exploring how authors has been develope it using BDD technics.
 
 ## Documentation
 [Use Case, ER diagram and User Story document](doc/UserStory.pdf)
@@ -49,7 +49,7 @@ If you change models fields, generate db with:
 Use:
   _rake cucumber_
 
-## System Requrements
+## System Requirements
 **_Team 14 - Invoice_** has been tested with the following Linux, Ruby and Rails versions
 ##### Ruby and Linux
 * 2.3.4 over Ubuntu 14.04.5 LTS
