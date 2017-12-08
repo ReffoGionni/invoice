@@ -2,10 +2,10 @@ Given("I am viewing the list of customers") do
   visit customers_path
 end
 
-When("I fill the filter field") do
-  fill_in 'filterInput', with: "Gio"  
+When("I fill the filter field with {string}") do |string|
+  fill_in 'filterInput', with: string  
 end
 
-Then("I see only the list of customers expected") do
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I see only the list of customers containing {string}") do |string|
+  expect(page).to have_text string
 end

@@ -1,3 +1,15 @@
+Given("I am viewing the customers page index") do
+  visit customers_path
+end
+
+Given("I click {string} on first entry") do |string|
+  first(:link, link).click
+end
+
+When("I fill the rate field") do
+  fill_in "Rate", with: "12"
+end
+
 Given("I am viewing the service page") do
   visit services_path
   click_on 'New Service'
@@ -22,17 +34,20 @@ Then("I expect the stopwatch will stop") do
 end
 
 Given("I am viewing the service page with blank fields") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit new_service_path
 end
 
 Then("I expect to see an error message") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_text("error")
 end
 
 Given("I am viewing the service page with all fields compiled") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit new_service_path
+  fill_in "Cf", with: "RFFGNN00E01A111X"
+  fill_in "Rate", with: "125"
+  fill_in "Duration", with: "15"
 end
 
 Then("I expect to see a confirmation message") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_text("success")
 end

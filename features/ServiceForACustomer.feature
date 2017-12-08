@@ -16,10 +16,10 @@ Feature: Service for a customer
 
   Scenario: Incomplete data
     Given I am viewing the service page with blank fields
-    When I click "Submit"
+    When I click "Create Service"
     Then I expect to see an error message
 
   Scenario: Complete data
     Given I am viewing the service page with all fields compiled
-    When I click "Submit"
+    When I click "Create Service"
     Then I expect to see a confirmation message

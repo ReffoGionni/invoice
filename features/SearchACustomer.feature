@@ -3,6 +3,6 @@ Feature: Search a customer
 
   Scenario: Entering a filter string    
     Given I am viewing the list of customers
-    When I fill the filter field    
+    When I fill the filter field with "Ref"
     And I click "filter"
-    Then I see only the list of customers expected
+    Then I see only the list of customers containing "Ref"

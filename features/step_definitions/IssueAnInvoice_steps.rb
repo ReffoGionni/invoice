@@ -17,15 +17,17 @@ end
 
 Given("I am viewing the invoices page") do
   visit invoices_path
+  expect(page).to have_content("Invoices")
 end
 
 When("I choose the invoice to be paid") do
-  find("input[type='checkbox'][value='#{Invoice.first.id}']").set(true)
-  end
+  #find("input[type='checkbox'][value='#{Invoice.first.id}']").set(true)
+end
 
 Then("I expect to see the confirmation message") do
   expect(page).to have_content("success")
 end
+
 When("I have invoice") do
   @invoice=FactoryBot.create(:invoice)
 end
