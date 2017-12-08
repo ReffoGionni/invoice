@@ -60,6 +60,8 @@ Use:
 ## License
 **_Team 14 - Invoice_** is distribuited under the terms of the GNU General Public License and published by the Free Software Foundation
 
+See [LICENSE](LICENSE) for details.
+
 ## Copyright
 Copyright (c) 2017 Anna Giovanelli and Gionni Reffo
 
