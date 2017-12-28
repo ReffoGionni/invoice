@@ -8,7 +8,9 @@ exploring how authors has been develope it using BDD technics.
 ## Documentation
 [Use Case, ER diagram and User Story document](doc/UserStory.pdf)
 
-[Test coverage document](doc/TestCoverage.pdf)
+[Coverage index](coverage/index.html) - generated with [simplecov](https://github.com/colszowka/simplecov)
+
+[Test coverage document - based on features completation](doc/TestCoverage.pdf)
 
 [Models diagram](doc/models_brief.svg)
 
