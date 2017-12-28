@@ -2,7 +2,7 @@
 **_Team 14 - Invoice_** is a system for:
 * customers that needs assistence online with semplicity
 * users than wants easly issue services and invoices for their customers
-> Warning: this is a not functioning didactical project and may be used to 
+> Warning: this is a didactical project and may be used to 
 exploring how authors has been develope it using BDD technics.
 
 ## Documentation
