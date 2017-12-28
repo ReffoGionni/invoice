@@ -22,6 +22,9 @@ class InvoicesController < ApplicationController
 
   # GET /invoices/1/edit
   def edit
+    if params[:payDate]
+      @invoice.payDate = Date.today
+    end
   end
 
   # POST /invoices

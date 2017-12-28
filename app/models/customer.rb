@@ -1,14 +1,12 @@
 class Customer < ApplicationRecord
-  has_many :service, dependent: :destroy
-  has_many :invoice, dependent: :destroy
+  has_many :service
+  #, dependent: :destroy
+  has_many :invoice
+  #, dependent: :destroy
   has_many :issue
   has_many :user, through: :issue
+  validates :cf, :name, :address, :postcode, :city, :prov, presence: true
 
-  #cf, name, address, postcode, city, prov
-  def hasMinData?
-    !(cf.nil?) && !(name.nil?) && !(address.nil?) && !(postcode.nil?) && !(city.nil?) && !(prov.nil?)
-  end
-  
   # Semplice verifica di validità del codice fiscale
   # Accettato solo numerico lungo 11 o alfanumerico lungo 16
   def hasValidCf?

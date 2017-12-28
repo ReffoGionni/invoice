@@ -14,5 +14,5 @@ Background:
     Given I am viewing the invoices page
     When I have invoice
     And I choose the invoice to be paid
-    And I click "Pay"
-    Then I expect to see the confirmation message
+    And I click "Update Invoice"
+    Then I expect the confirmation message

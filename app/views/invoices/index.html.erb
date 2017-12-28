@@ -19,7 +19,6 @@
     <% @invoices.each do |invoice| %>
 
       <tr>
-        <td><%=check_box_tag "invoice_ids[]", invoice.id%></td>
         <td><%= invoice.cf %></td>
         <td><%= invoice.invoiceNumber %></td>
         <td><%= invoice.totDuration %></td>
@@ -28,6 +27,7 @@
         <td><%= link_to 'Show', invoice %></td>
         <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
         <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pay', edit_invoice_path(invoice, :payDate => Date) %></td>
 
       </tr>
     <% end %>
@@ -35,7 +35,4 @@
 </table>
 
 <br>
-<p>
-    <button onclick="payInvoice">Pay</button>
-</p>
 <%= link_to 'New Invoice', new_invoice_path %>

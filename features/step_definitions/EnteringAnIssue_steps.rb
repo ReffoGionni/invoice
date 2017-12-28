@@ -1,6 +1,7 @@
 Given("I am viewing the new issue page") do
   visit new_issue_path
 end
+
 When("I have a customer") do
   @customer=FactoryBot.create(:customer)
 end
