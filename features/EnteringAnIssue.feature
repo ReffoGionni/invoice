@@ -6,11 +6,11 @@ Feature: A customer insert a new issue
     When I have a customer
     And I correctly fill the Cf and Description
     And I click "Create Issue"
-    Then I expect the confirmation message
+    Then I expect the "success" message
 
   Scenario: Entering an invalid issue
     Given I am viewing the new issue page
     When I have a customer
     And I left blank the  Cf and Description
     And I click "Create Issue"
-    Then I expect to get an error message
+    Then I expect the "error" message

@@ -1,14 +1,14 @@
-Given("I am viewing the initial invoice page") do
-  visit new_invoice_path
+Given("I am viewing the index invoice page") do
+  #visit new_invoice_path
+  visit invoices_path
 end
 
 When("I correctly fill the fields") do
-   fill_in 'Cf', with: 1
+   fill_in 'Cf', with: @customer.cf
    fill_in 'Invoicenumber', with: 1234
    fill_in 'Totduration', with: 2
    #fill_in 'Paydate', with: ('a'..'z').to_a.shuffle.join
    fill_in 'Totaldue', with: 4
-
 end
 
 Then("I see the invoice") do

@@ -5,15 +5,15 @@ Feature: Update or delete a customer
     Given I am viewing the update page of first customer
     When I fill the "City" field with "Trento"
     And I click "Update Customer"
-    Then I expect the confirmation message
+    Then I expect the "success" message
 
   Scenario: Invalid update to a customer
     Given I am viewing the update page of first customer
     When I fill the "Cf" field with ""
     And I click "Update Customer"
-    Then I expect to get an error message
+    Then I expect the "error" message
 
   Scenario: Delete a customer
     Given I am viewing the index page of customers
     When I click "Destroy"
-    Then I expect the confirmation message
+    Then I expect the "success" message

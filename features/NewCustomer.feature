@@ -5,11 +5,11 @@ Feature: Inserting a new customer
     Given I am viewing the edit page of a customer
     When I correctly fill the needed fields
     And I click "Create Customer"
-    Then I expect the confirmation message
+    Then I expect the "success" message
 
   Scenario: Entering incomplete information of a customer
     Given I am viewing the edit page of a customer
     When I fill only the some fields
     And I left blank the "surname" field
     And I click "Create Customer"
-    Then I expect to get an error message
+    Then I expect the "error" message
